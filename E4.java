@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class E4 {
 
     public static boolean isPermutationP(String cad){
