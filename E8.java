@@ -1,17 +1,27 @@
 public class E8 {
 
     public static void ZeroMatrix(int[][] matrix){
-        for(int i = 0; i < matrix.length; i++){
-            for(int j = 0; j < matrix[0].length; j++){
+        int[] col = new int[matrix.length];
+        int[] row = new int[matrix[0].length];
+        int i, j;
+        for( i = 0; i < matrix.length; i++){
+            for(j = 0; j < matrix[0].length; j++){
                 if(matrix[i][j] == 0){
-                    zeroRow(matrix, i);
-                    zeroColumn(matrix, j);
+                    col[j] = -1;
+                    row[i] = -1;
                 }
             }
-            System.out.println(' ');
-            Print(matrix);
+        }
+
+        for( i = 0; i < row.length; i++){
+            if(row[i] == -1) zeroRow(matrix, i);
         }
         
+        for( i = 0; i < col.length; i++){
+            if(col[i] == -1) zeroColumn(matrix, i);
+        }
+
+        Print(matrix);
     }
 
     public static void zeroRow(int[][] matrix, int row){
