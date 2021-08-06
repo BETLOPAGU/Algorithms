@@ -25,6 +25,22 @@ public class E7 {
         return matrix;
     }
 
+    //Mine solution
+    public static int[][] MRotateMatrix(int[][] matrix){
+        int[][] nmatrix = new int[matrix.length][matrix.length];
+        int col, row = 0;
+
+        for(int i = matrix.length -1; i >= 0; i--){
+            col = 0;
+            for(int j = 0; j < matrix.length; j++){
+                nmatrix[row][col] = matrix[i][j];
+                col++; 
+            }   
+            row++;      
+        }
+        return nmatrix;
+    }
+
     public static void Print(int[][] matrix){
         for (int x=0; x < matrix.length; x++) {
             System.out.print("|");
@@ -38,7 +54,7 @@ public class E7 {
 
     public static void main(String[] args){
         int[][] matrix = {{1,2,3},{4,5,6},{7,8,9}};
-        int[][] nmatrix = RotateMatrix(matrix);
+        int[][] nmatrix = MRotateMatrix(matrix);
         Print(nmatrix);
     }
 }
