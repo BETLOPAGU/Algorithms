@@ -1,6 +1,6 @@
 public class E7 {
     //Solucion del libro
-    public static void RotateMatrix(int[][] matrix){
+    public static int[][] RotateMatrix(int[][] matrix){
         if(matrix.length == 0 || matrix.length != matrix[0].length)
             System.out.println("La matriz no es nxn");   
 
@@ -21,9 +21,11 @@ public class E7 {
                 //top -> right
                 matrix[i][last] = top; //right <- saved top
             }
-
         }
+        return matrix;
+    }
 
+    public static void Print(int[][] matrix){
         for (int x=0; x < matrix.length; x++) {
             System.out.print("|");
             for (int y=0; y < matrix[x].length; y++) {
@@ -32,11 +34,11 @@ public class E7 {
             }
             System.out.println("|");
           }
-    
     }
 
     public static void main(String[] args){
         int[][] matrix = {{1,2,3},{4,5,6},{7,8,9}};
-        RotateMatrix(matrix);
+        int[][] nmatrix = RotateMatrix(matrix);
+        Print(nmatrix);
     }
 }
