@@ -25,8 +25,7 @@ public class E8{
         }
 
         if(flag)
-        for (i = 0; i < matrix[0].length; i++)
-            matrix[0][i] = 0;
+            zeroRow(matrix, 0);
 
         Print(matrix);
     }
