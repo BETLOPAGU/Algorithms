@@ -1,23 +1,33 @@
 public class E9 {
     
-    public static boolean isSubstring(String CadOri, String SubCad){
-        boolean val = false;
+    public static boolean isSubstring(String CadOri, String SubCad){    
+        int i = 0, aux;
 
-        if(CadOri.length() != SubCad.length())
-            return false; 
-
-        for(int i = 0; i < CadOri.length(); i++){
-            
+        for(aux = 0; aux < SubCad.length(); aux++){
+            if(CadOri.charAt(i) == SubCad.charAt(aux)){
+                i++;                
+                if(i == CadOri.length()){
+                    return true;
+                }
+            }else{
+                i = 0;
+                if(CadOri.charAt(i) == SubCad.charAt(aux))
+                    i++;
+            }                 
         }
-
-        return val;
+        return false;
     }
 
+    public static boolean StringRotation(String CadOri, String SubCad){boolean a = CadOri.length() == SubCad.length() && isSubstring(CadOri, SubCad+SubCad) ? true : false; return a;}
+
     public static void main(String[] args){
-        if(isSubstring("Cafe", "afeC")){
-            System.out.println("Si es una subadena");
+        String Org = "Cafe";
+        String SubCad = "afeC"; 
+        
+        if(StringRotation(Org, SubCad)){
+            System.out.println("Si es una cadena rotada");
         }else{
-            System.out.println("No es una subadena");
+            System.out.println("No es una cadena rotada");
         }
     }
 }

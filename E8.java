@@ -11,7 +11,6 @@ public class E8{
                     if(i == 0){
                         flag = true;
                     }
-
                 }
             }
         }
