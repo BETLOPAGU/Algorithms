@@ -65,38 +65,25 @@ class Node<T>{
         }
     }
 
-    public void RemoveDup1(){
-        //System.out.print("Si entre");
-        Node temp = head;
-        Node prev=head;
-       while (temp != null) {
-           if(temp.data!=prev.data)
-           {
-               prev.next=temp;
-               prev=temp;
-           }
-           temp=temp.next;
-       }
-  
-       if(prev!=temp){
-           prev.next=null;
-       }
-   }
-
-   public void RemoveDup2(){
+    public void KtoLast(int n){
+        int len = 0, i;
         Node aux = head;
 
         while( aux != null){
-            Node aux2 = aux;
-            while(aux2.next != null){
-                if(aux2.next.data == aux.data){
-                    aux2.next = aux2.next.next;
-                }else{
-                    aux2 = aux2.next;
-                }
-            }
             aux = aux.next;
+            len++;
         }
 
-   }
+        if(len < n){
+            System.out.println("The list lenght is smaller than the n introduced");
+            return;
+        }
+
+        aux = head;
+
+        for(i = 0; i < len - n - 1; i++)
+            aux = aux.next;
+        
+        System.out.println(aux.data); 
+    }
 }
