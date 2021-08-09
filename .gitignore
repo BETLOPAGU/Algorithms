@@ -1,3 +1,5 @@
 
-*.class
-E5.java
+Chapter1/*.class
+Chapter2/*.class
+Chapter1/E5.java
+Chapter2/ListaDL.java
