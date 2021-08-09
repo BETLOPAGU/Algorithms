@@ -11,7 +11,6 @@ class Node<T>{
 
  class Lista<T>{
     protected Node<T> head = null;
-    protected Node<T> temp, prev;
 
     public Node<T> pushB(T data){
         
@@ -68,8 +67,8 @@ class Node<T>{
 
     public void RemoveDup1(){
         //System.out.print("Si entre");
-        temp = head;
-        prev=head;
+        Node temp = head;
+        Node prev=head;
        while (temp != null) {
            if(temp.data!=prev.data)
            {
@@ -82,5 +81,22 @@ class Node<T>{
        if(prev!=temp){
            prev.next=null;
        }
+   }
+
+   public void RemoveDup2(){
+        Node aux = head;
+
+        while( aux != null){
+            Node aux2 = aux;
+            while(aux2.next != null){
+                if(aux2.next.data == aux.data){
+                    aux2.next = aux2.next.next;
+                }else{
+                    aux2 = aux2.next;
+                }
+            }
+            aux = aux.next;
+        }
+
    }
 }

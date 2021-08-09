@@ -12,7 +12,7 @@ public class mainE1 {
         System.out.println("\n");
         l.Print();
         System.out.println("\n");
-        l.RemoveDup1();
+        l.RemoveDup2();
         l.Print();
         
         //l2.RemoveDup1();
