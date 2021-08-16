@@ -1,38 +1,24 @@
-class Node<T>{
-        
-    T data; 
-    Node<T> next;
+class Lista<T>{
 
-    public void Node(T d){   
-        data = d;
-        next = null;
-    }
-}
-
- class Lista<T>{
     protected Node<T> head = null;
 
-    public Node<T> pushB(T data){
-        
-        Node ND = new Node();
-        ND.data = data;
+    public Node<T> pushBeginning(T data){     
+        Node<T> ND = new Node<T>(data);
         if(head == null){
             head = ND;
         }else{
             ND.next = head;
             head = ND;
         }
-         return head;
+        return head;
     }
 
-    public Node<T> pushE(T data){
-        
-        Node ND = new Node();
-        ND.data = data;
+    public Node<T> pushEnd(T data){
+        Node<T> ND = new Node<T>(data);
         if(head == null){
             head = ND;
         }else{
-            Node aux = head;            
+            Node<T> aux = head;            
             while(aux.next != null){
                 aux = aux.next;
             }
@@ -42,8 +28,8 @@ class Node<T>{
          return head;
     }
 
-    public void Delete(Node n){
-        Node aux;
+    public void DeleteNode(Node<T> n){
+        Node<T> aux;
 
         if(n.next == null){
             n = null;
@@ -58,32 +44,14 @@ class Node<T>{
     }
 
     public void Print(){
-        Node aux = head;
+        Node<T> aux = head;
         while(aux != null){
             System.out.print(" " + aux.data);
             aux = aux.next;
         }
     }
 
-    public void KtoLast(int n){
-        int len = 0, i;
-        Node aux = head;
-
-        while( aux != null){
-            aux = aux.next;
-            len++;
-        }
-
-        if(len < n){
-            System.out.println("The list lenght is smaller than the n introduced");
-            return;
-        }
-
-        aux = head;
-
-        for(i = 0; i < len - n - 1; i++)
-            aux = aux.next;
-        
-        System.out.println(aux.data); 
+    public Node<T> getHeadNode(){
+        return head;
     }
 }

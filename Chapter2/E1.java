@@ -1,8 +1,8 @@
-class Lista2<T> extends Lista<T>{   
-     public void RemoveDup1(){
-         System.out.print("Si entre");
-         temp = head;
-         prev=head;
+class E1<T> extends Lista<T>{   
+    //Bad solution, it only works with Nodes that are consecutive and their data are the same. 
+    public void RemoveDup(Node n){
+        Node<T> temp = head;
+        Node<T> prev=head;
         while (temp != null) {
             if(temp.data!=prev.data)
             {
@@ -16,8 +16,8 @@ class Lista2<T> extends Lista<T>{
             prev.next=null;
         }
     }
-
-    public void RemoveDup2(){
+    //Good solution. 
+    public void RemoveDup2(Node n){
         Node aux = head;
 
         while( aux != null){

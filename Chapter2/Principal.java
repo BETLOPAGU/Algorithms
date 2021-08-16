@@ -1,22 +1,21 @@
 public class Principal{
     public static void main(String[] args){ 
-        Lista<Integer> l = new Lista<Integer>();
-       // Lista2<Integer> l2 = new Lista2<Integer>();
-
-        l.pushE(7);
-        l.pushE(6);
-        l.pushE(8);
-        l.pushE(11);
-        l.pushE(30);
+        E2<Integer> l = new E2<Integer>();
+         
+        l.pushEnd(7);
+        l.pushEnd(6);
+        l.pushEnd(8);
+        l.pushEnd(11);
+        l.pushEnd(30);
         l.Print();
         System.out.println("\n");
-        /*Exercise 1*/
+        //     .: EXERCISE 1 :. 
         //l.RemoveDup2();
         //l.Print();
         
-        /*Exercise 2*/
-        l.KtoLast(3);
-
-
+        //     .: EXERCISE 2 :. 
+        l.KtoLast(4);
+        Node<Integer> response = l.KtoLastRecursive(null, 4); 
+        System.out.println(response.data);
     }
 }
