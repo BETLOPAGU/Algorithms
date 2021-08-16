@@ -1,6 +1,6 @@
 public class Principal{
     public static void main(String[] args){ 
-        E2<Integer> l = new E2<Integer>();
+        E3<Integer> l = new E3<Integer>();
          
         l.pushEnd(7);
         l.pushEnd(6);
@@ -14,8 +14,12 @@ public class Principal{
         //l.Print();
         
         //     .: EXERCISE 2 :. 
-        l.KtoLast(4);
-        Node<Integer> response = l.KtoLastRecursive(null, 4); 
-        System.out.println(response.data);
+        //l.KtoLast(4);
+        //Node<Integer> response = l.KtoLastRecursive(null, 4); 
+        //System.out.println(response.data);
+
+        //     .: EXERCISE 3 :.
+        //l.RemoveMiddleNode(node);        
+        l.Print();
     }
 }
