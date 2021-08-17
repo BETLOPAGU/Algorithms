@@ -1,6 +1,6 @@
 public class Principal{
     public static void main(String[] args){ 
-        E3<Integer> l = new E3<Integer>();
+        E4<Integer> l = new E4<Integer>();
          
         l.pushEnd(7);
         l.pushEnd(6);
@@ -20,6 +20,9 @@ public class Principal{
 
         //     .: EXERCISE 3 :.
         //l.RemoveMiddleNode(node);        
-        l.Print();
+        //l.Print();
+
+        //     .: EXERCISE 4 :.
+
     }
 }
