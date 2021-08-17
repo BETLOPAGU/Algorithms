@@ -1,13 +1,15 @@
 public class Principal{
     public static void main(String[] args){ 
-        E4<Integer> l = new E4<Integer>();
+        E6<Integer> l = new E6<Integer>();
          
-        l.pushEnd(7);
-        l.pushEnd(6);
-        l.pushEnd(8);
-        l.pushEnd(11);
-        l.pushEnd(30);
+        l.pushBeginning(30);
+        l.pushBeginning(11);
+        l.pushBeginning(8);
+        l.pushBeginning(11);
+        l.pushBeginning(30);
         l.Print();
+        Node<Integer> h = l.getHeadNode();
+        //System.out.println(l.getHeadNode().data);
         System.out.println("\n");
         //     .: EXERCISE 1 :. 
         //l.RemoveDup2();
@@ -24,5 +26,9 @@ public class Principal{
 
         //     .: EXERCISE 4 :.
 
+
+        //     .: EXERCISE 6 :. 
+        if(l.isPalindrome(h)) System.out.println("It's a palindrome");
+        else System.out.println("It's not a palindrome");
     }
 }

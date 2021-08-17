@@ -51,6 +51,14 @@ class Lista<T>{
         }
     }
 
+    public void PrintgivenNodeHead(Node<T> N){
+        Node<T> aux = N;
+        while(aux != null){
+            System.out.print(" " + aux.data);
+            aux = aux.next;
+        }
+    }
+
     public Node<T> getHeadNode(){
         return head;
     }
