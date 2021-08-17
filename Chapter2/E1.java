@@ -1,3 +1,4 @@
+
 class E1<T> extends Lista<T>{   
     //Bad solution, it only works with Nodes that are consecutive and their data are the same. 
     public void RemoveDup(Node n){
