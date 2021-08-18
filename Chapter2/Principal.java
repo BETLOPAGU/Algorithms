@@ -1,12 +1,12 @@
 public class Principal{
     public static void main(String[] args){ 
-        E6<Integer> l = new E6<Integer>();
+        E8<Integer> l = new E8<Integer>();
          
         l.pushBeginning(30);
         l.pushBeginning(11);
         l.pushBeginning(8);
+        l.pushBeginning(5);
         l.pushBeginning(11);
-        l.pushBeginning(3);
         l.Print();
         Node<Integer> h = l.getHeadNode();
         //System.out.println(l.getHeadNode().data);
@@ -28,10 +28,14 @@ public class Principal{
 
 
         //     .: EXERCISE 6 :. 
-        if(l.isPalindrome(h)) System.out.println("It's a palindrome");
+        /* if(l.isPalindrome(h)) System.out.println("It's a palindrome");
         else System.out.println("It's not a palindrome");
         if(l.isPalindrome2(h)) System.out.println("It's a palindrome");
-        else System.out.println("It's not a palindrome");
+        else System.out.println("It's not a palindrome"); */
+
+
+        //      .: EXERCISE 8 :. 
+        System.out.println(l.LoopDetection(l.getHeadNode()).data);
         
     }
 }
